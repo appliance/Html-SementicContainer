@@ -1,0 +1,125 @@
+<!-- 无障碍网页提倡协议-目的让所有的访问者都可以获取网站的内容，此处可能涉及一些盲人聋哑人，需要借助辅助设备进行网页访问 -->
+
+<!-- <!DOCTYPE html> 声明了页面为html5文档 -->
+
+<!DOCTYPE html>    
+
+<!-- lang属性 lang="languag-code" 设置页面默认语言的代码 其中en表示英语，es表示西班牙语，fr表示法语 -->
+<html lang="en">  
+<head>
+    <!--文档的字符编码为UTF-8格式 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- title标题 简短 描述性的 唯一 -->
+    <!-- title标题 会被搜索引擎采用 -->
+    <!-- title标题 建议将核心内容放在前60个字符，因为搜索引擎一般讲超过此数目的字符截断 -->
+    <title>html5基础知识学习</title>
+</head>
+<body>
+    <!-- 
+        知识点1:分级标题 
+        h1-h6
+        利用标题建立文档结构，就像大纲一样,好的标题层结构有助于访问者
+        一般是基于内容所处的层次关系选择标题级数，而不是根据你希望文字应该显示的大小
+        不要使用h1-h6标记副标题，标语以及无法成为独立标题的子标题。（如一篇新闻报道，主标题后面跟着副标题，此时副标题应该使用段落p）
+        副标题标可以添加一个类名：class = "subhead"
+    
+    -->
+    <h1>Barcelona's Architect</h1>
+    <h2>La Sagrada Familia</h2>
+    <h2>Park Guell</h2>
+
+
+
+
+    <!--
+        常规页面结构    语义（注重语义的关注，不要什么元素都用div来进行表示，这样会使得页面缺乏语义）
+        语义结构容器 和div是等价的 只是多了一层语义而已
+        下面的语义元素，是可以添加class或者id属性的
+
+        关于class和id属性有以下注意事项：
+            1、推荐使用类为元素添加样式
+            2、同一个html页面中每个id都必须是唯一的，同一个id一般都是赋予给同一个元素
+            3、一个class可以分配给页面中任意数量的元素
+            4、在class和id名称中，通常使用短横线分割多个单词。例如：class="footer-page"
+    -->
+
+
+
+
+    <!-- 知识点2： 页眉（header）
+        页面中包含一组介绍性或导航性内容的区域用header元素进行标记
+        页眉常见形式：页眉内容包括网站标志、主导航、其他全站链接、甚至搜索框
+        role="banner" 属性表示此页眉为页面级页眉
+     -->
+     <header role="banner">
+        <!-- 内部可放置各类导航超链接，网站logo等 -->
+     </header>
+
+
+     <!-- 知识点3：标记导航（nav）
+          明确表示主导航链接的区域，对文档中重要的链接群使用nav
+          role属性不是必须的但是可以提高可访问性
+          一般使用 ul ol元素来对链接进行结构化
+    -->
+    <nav role="navigation">
+        <ul>
+            <li><a href="#guide">Barcelona's Architect</a></li>
+            <li><a href="#sagrada Familia">La Sagrada Familia</a></li>
+            <li><a href="#park-guell">Park Guell</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- 知识点4： 标记页面的主要区域（main）
+        一个页面只有一个部分代表其主要内容，可以将这样的内容包在main元素中，该元素在一个页面仅使用一次
+    -->
+    <main role="main">
+
+    </main>
+
+
+    <!-- 知识点5：创建文章（article）
+        文章中包含标题段落图片等，此处只是做一个区域限制（一个独立的容器）
+        独立的可再分配的内容项都可以用article来进行语义化的规范表示 
+    -->
+    <article>
+
+    </article>
+
+    <!-- 知识点6：定义区块（section） 
+        section元素代表文档的一个一般的区块，具有相似主题的一组内容，通常包含一个标题，牢记具有相似主题的一组内容就好了
+        section并不影响页面的显示，看情况进行使用
+        section和article的区别在于，section在本质上组织性和结构性更强，而article代表的是自包含的容器
+    -->
+    <section>
+
+    </section>
+
+    <!-- 知识点7：指定附注栏（aside）
+        页面中有一部分内容与主体内容相关性不强，但可以独立存在
+        如：引述、侧栏、相关文章的一组链接、广告等
+    -->
+    <aside>
+
+    </aside> 
+
+    <!-- 知识点8：创建页脚（footer）
+        指向相关文档的链接、版权信息、作者以及其他类似条目
+        只有当footer是页面级页脚时 role="contentinfo"且一个页面此属性只能使用一次
+    -->
+    <footer role="contentinfo">
+
+    </footer>
+
+         
+    </section>
+
+
+
+
+
+    <!-- 一般处于性能的考虑，js加载都在</body>标签前加载 -->
+</body>
+</html>
